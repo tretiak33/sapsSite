@@ -1,0 +1,339 @@
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  height: 48px;
+  padding-inline: var(--space-24);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-button);
+  line-height: var(--lh-button);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.btn--primary {
+  background: var(--gray-16);
+  color: var(--gray-1);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--gray-16);
+  border: 1px solid var(--gray-4);
+}
+
+.btn--back {
+  background: var(--gray-2);
+  color: var(--gray-11);
+  padding-inline: var(--space-20);
+  height: 44px;
+}
+.btn--back .btn__icon {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn--primary:hover { background: var(--gray-11); }
+  .btn--outline:hover { background: var(--gray-2); }
+  .btn--back:hover { background: var(--gray-6); color: var(--gray-16); }
+}
+
+@media (max-width: 767px) {
+  .btn {
+    height: 44px;
+    padding-inline: var(--space-20);
+  }
+}
+
+/* ---------- Nav link ---------- */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-nav);
+  line-height: var(--lh-nav);
+  color: var(--gray-9);
+  font-weight: 400;
+  transition: color .15s ease;
+}
+.nav-link.is-active {
+  color: var(--gray-16);
+  font-weight: 600;
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-link:hover {
+    color: var(--gray-16);
+    font-weight: 600;
+  }
+}
+
+/* ---------- Text swap (вертикальная смена текста при hover) ----------
+   Единая механика для .btn и .nav-link. Разметку создаёт JS (main.js) —
+   оборачивает текстовый узел в трек с двумя одинаковыми строками. */
+.text-swap {
+  display: inline-block;
+  overflow: hidden;
+  height: 1em;
+  line-height: 1;
+  vertical-align: top;
+}
+.text-swap__track {
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--dur-swap) var(--ease-swap);
+}
+.text-swap__line {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  white-space: nowrap;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover .text-swap__track,
+  .nav-link:hover .text-swap__track {
+    transform: translateY(-1em);
+  }
+}
+
+/* ---------- Badge / pill tag ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-pill);
+  background: var(--gray-2);
+  color: var(--gray-11);
+  font-size: var(--fs-caption-s);
+  line-height: var(--lh-caption-s);
+}
+
+/* Внутри карточек портфолио фон карточки уже gray-2 —
+   бейджи должны быть светлее, чтобы выделяться (как в макете) */
+.project-card__tags .badge {
+  background: var(--gray-1);
+}
+
+/* ---------- Header ---------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  background: rgba(244, 244, 244, 0.10);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  padding-block: var(--space-28);
+  transform: translateY(0);
+  transition: transform 380ms var(--ease-swap);
+}
+.header.is-hidden {
+  transform: translateY(-100%);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-avatar);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.header__name {
+  font-size: var(--fs-body-m);
+  font-weight: 600;
+  color: var(--gray-16);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-32);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.header__burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.header__burger svg { width: 22px; height: 22px; }
+
+@media (max-width: 1179px) {
+  .header__nav,
+  .header__actions {
+    display: none;
+  }
+  .header__burger {
+    display: inline-flex;
+  }
+}
+
+/* ---------- Mobile menu overlay ---------- */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--gray-1);
+  padding: var(--space-24) var(--container-pad);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform .25s ease;
+}
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+.mobile-menu__top {
+  display: flex;
+  justify-content: flex-end;
+}
+.mobile-menu__close {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-menu__close svg { width: 22px; height: 22px; }
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  margin-top: var(--space-40);
+}
+.mobile-menu__nav .nav-link {
+  font-size: var(--fs-body-l);
+}
+
+.mobile-menu__actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-bottom: var(--space-24);
+}
+.mobile-menu__actions .btn {
+  width: 100%;
+}
+
+/* ---------- Surface card (generic rounded gray block) ---------- */
+.surface-card {
+  background: var(--gray-2);
+  border-radius: var(--radius-card);
+  padding: var(--card-padding);
+}
+
+/* ---------- Media (rounded image) ---------- */
+.media {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: var(--section-gap);
+  padding-bottom: var(--space-64);
+}
+
+.footer-card {
+  background: var(--gray-16);
+  color: var(--gray-1);
+  border-radius: var(--radius-card);
+  padding: var(--space-56) var(--card-padding);
+  text-align: center;
+}
+.footer-card__title {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  font-weight: 700;
+  margin-bottom: var(--space-24);
+}
+.footer-card__row {
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+  color: var(--gray-5);
+}
+.footer-card__row + .footer-card__row {
+  margin-top: var(--space-4);
+}
+
+.site-footer__copy {
+  text-align: center;
+  color: var(--gray-9);
+  font-size: var(--fs-body-s);
+  margin-top: var(--space-24);
+}
+
+/* ---------- Scroll-to-top (только десктоп) ---------- */
+.scroll-top {
+  position: fixed;
+  right: 32px;
+  bottom: 40px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+  z-index: 50;
+}
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+@media (hover: hover) and (pointer: fine) {
+  .scroll-top:hover {
+    background: var(--gray-13);
+  }
+}
+.scroll-top svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1179px) {
+  .scroll-top {
+    display: none;
+  }
+}

@@ -1,0 +1,125 @@
+/* ==========================================================================
+   BASE / RESET
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  padding-top: var(--header-h); /* компенсация фиксированного header */
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+main section[id] {
+  scroll-margin-top: var(--header-h);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* Visible keyboard focus (accessibility floor) */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary-8);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---- Layout helpers ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* Секции не несут собственных вертикальных паддингов — блок ровно
+   такой высоты, как его контент. Расстояние между блоками задаётся
+   отдельной переменной --section-gap (см. tokens.css) через margin-top. */
+.section {
+  margin-top: var(--section-gap);
+}
+
+.section--hero {
+  margin-top: 0;
+  padding-top: var(--space-64);
+}
+
+.section-label {
+  color: var(--color-text-muted);
+  font-size: var(--fs-body-l);
+  line-height: var(--lh-body-l);
+  text-align: center;
+  margin-bottom: var(--space-48);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Узкая контентная колонка (900) — центрирована внутри общего container (1200) */
+.content-narrow {
+  width: 100%;
+  max-width: var(--content-narrow);
+  margin-inline: auto;
+}

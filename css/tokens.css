@@ -1,0 +1,137 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Источник: дизайн-система (Colors, Spacing scale, Typography 1440/375)
+   ========================================================================== */
+
+:root {
+  /* ---- Grayscale ---- */
+  --gray-1: #F4F4F4;
+  --gray-2: #E8E8E8;
+  --gray-3: #DCDCDC;
+  --gray-4: #C9C9C9;
+  --gray-5: #B6B6B6;
+  --gray-6: #A6A6A6;
+  --gray-7: #969696;
+  --gray-8: #868686;
+  --gray-9: #767676;
+  --gray-10: #656565;
+  --gray-11: #555555;
+  --gray-12: #454545;
+  --gray-13: #353535;
+  --gray-14: #252525;
+  --gray-15: #1F1F1F;
+  --gray-16: #181818;
+
+  /* ---- Primary (accent) scale ---- */
+  --primary-1: #FCF5EE;
+  --primary-2: #F7E7D3;
+  --primary-3: #F3D8B9;
+  --primary-4: #EECA9E;
+  --primary-5: #EABB84;
+  --primary-6: #E5AC69;
+  --primary-7: #E19E4F;
+  --primary-8: #DC8F34; /* фирменный цвет */
+  --primary-9: #CD8023;
+  --primary-10: #B36F1F;
+
+  --color-error: #892929;
+
+  /* ---- Semantic aliases ---- */
+  --color-bg: var(--gray-1);
+  --color-surface: var(--gray-2);
+  --color-surface-strong: var(--gray-16);
+  --color-text: var(--gray-16);
+  --color-text-muted: var(--gray-9);
+  --color-text-subtle: var(--gray-10);
+  --color-border: var(--gray-3);
+  --color-on-dark: var(--gray-1);
+
+  /* ---- Spacing scale ---- */
+  --space-0: 0px;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-36: 36px;
+  --space-40: 40px;
+  --space-44: 44px;
+  --space-48: 48px;
+  --space-52: 52px;
+  --space-56: 56px;
+  --space-60: 60px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-128: 128px;
+
+  /* ---- Radii (уточнено с клиентом) ---- */
+  --radius-avatar: 8px;      /* фото в хедере, оба разрешения */
+  --radius-card: 28px;       /* карточки/фото — desktop */
+  --radius-pill: 999px;      /* кнопки-пилюли, теги */
+  /* Радиус картинки ВНУТРИ карточки портфолио: 8px на 1440,
+     дальше пропорционально масштабируется вместе с экраном (не ступенчато) */
+  --radius-card-image: clamp(4px, 0.556vw, 8px);
+
+  /* ---- Card padding (уточнено с клиентом) ---- */
+  --card-padding: 36px;      /* desktop */
+
+  /* ---- Grid / container ---- */
+  --container-max: 1440px;
+  --content-max: 1200px;     /* 1440 - 120*2, узкая колонка контента */
+  --content-narrow: 900px;   /* уже: опыт работы, текстовые блоки проекта */
+  --container-pad: clamp(20px, 8.3vw, 120px);
+  --grid-gutter: 24px;
+
+  /* ---- Section rhythm ----
+     Расстояние МЕЖДУ блоками (не паддинг внутри блока):
+     375px → 80px, 1440px → 160px, линейная интерполяция между ними,
+     дальше растёт вместе с экраном, но не больше 180px. */
+  --section-gap: clamp(80px, calc(51.8px + 7.51vw), 180px);
+
+  /* ---- Typography: font families ---- */
+  /* В дизайн-системе типографика задана только размерами/лидингом,
+     без указания гарнитуры. Визуально ближе всего гротеск типа Inter —
+     принято как рабочее решение, при необходимости легко заменить. */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ---- Typography scale: 1440 ---- */
+  --fs-hero: 36px;   --lh-hero: 42px;
+  --fs-h2: 28px;     --lh-h2: 32px;
+  --fs-h3: 24px;     --lh-h3: 28px;
+  --fs-body-l: 20px; --lh-body-l: 24px;
+  --fs-body-m: 16px; --lh-body-m: 22px;
+  --fs-body-s: 14px; --lh-body-s: 20px;
+  --fs-button: 16px; --lh-button: 20px;
+  --fs-caption-s: 14px; --lh-caption-s: 16px;
+  --fs-nav: 16px;    --lh-nav: 22px;
+
+  /* ---- Motion ---- */
+  --ease-swap: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-swap: 400ms;
+  --header-h: 96px; /* фолбэк, уточняется в JS по реальной высоте */
+}
+
+/* ---- Typography scale: 375 (mobile) ---- */
+@media (max-width: 767px) {
+  :root {
+    --fs-hero: 26px;   --lh-hero: 30px;
+    --fs-h2: 24px;     --lh-h2: 28px;
+    --fs-h3: 20px;     --lh-h3: 24px;
+    --fs-body-l: 16px; --lh-body-l: 22px;
+    --fs-body-m: 14px; --lh-body-m: 20px;
+    --fs-body-s: 12px; --lh-body-s: 16px;
+    --fs-button: 14px; --lh-button: 18px;
+    --fs-caption-s: 12px; --lh-caption-s: 16px;
+    --fs-nav: 14px;    --lh-nav: 20px;
+
+    --radius-card: 16px;   /* уточнено с клиентом */
+    --card-padding: 18px;  /* уточнено с клиентом */
+  }
+}

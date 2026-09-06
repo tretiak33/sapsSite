@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анна Сапугольцева — UX/UI дизайнер</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__brand">
+      <img class="header__avatar" src="assets/images/portrait.jpg" alt="Анна Сапугольцева">
+      <span class="header__name">Анна Сапугольцева</span>
+    </a>
+
+    <nav class="header__nav">
+      <a href="#portfolio" class="nav-link">Портфолио</a>
+      <a href="#experience" class="nav-link">Резюме</a>
+      <a href="#skills" class="nav-link">Навыки</a>
+      <a href="#about" class="nav-link">Обо мне</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="assets/files/Sapugoltseva-CV.pdf" target="_blank" rel="noopener" class="btn btn--outline">CV</a>
+      <a href="https://t.me/annnechh" class="btn btn--primary">Написать в tg</a>
+    </div>
+
+    <button class="header__burger" data-burger-open aria-label="Открыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu__top">
+    <button class="mobile-menu__close" data-burger-close aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav">
+    <a href="#portfolio" class="nav-link" data-burger-close>Портфолио</a>
+    <a href="#experience" class="nav-link" data-burger-close>Резюме</a>
+    <a href="#skills" class="nav-link" data-burger-close>Навыки</a>
+    <a href="#about" class="nav-link" data-burger-close>Обо мне</a>
+  </nav>
+  <div class="mobile-menu__actions">
+    <a href="https://t.me/annnechh" class="btn btn--primary">Написать в tg</a>
+    <a href="assets/files/Sapugoltseva-CV.pdf" target="_blank" rel="noopener" class="btn btn--outline">CV</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="section section--hero container hero">
+    <div class="hero__col">
+      <div class="hero__badges">
+        <span class="badge">ux/ui · web · mobile</span>
+        <span class="badge">г. Санкт-Петербург</span>
+      </div>
+
+      <div class="hero__body">
+        <p class="hero__eyebrow">( Привет, я Аня )</p>
+        <h1 class="hero__title">ux / ui дизайнер</h1>
+        <p class="hero__subtitle">Работала над мобильными приложениями и web-интерфейсами</p>
+        <div class="hero__actions">
+          <a href="https://t.me/annnechh" class="btn btn--primary">Написать в tg</a>
+          <a href="assets/files/Sapugoltseva-CV.pdf" target="_blank" rel="noopener" class="btn btn--outline">CV</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__image">
+      <img src="assets/images/portrait.jpg" alt="Портрет Анны Сапугольцевой">
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section container">
+    <p class="section-label">( Портфолио )</p>
+
+    <div class="portfolio-grid">
+
+      <a href="projects/studia54.html" class="project-card">
+        <div class="project-card__content">
+<div class="project-card__tags" data-mobile-limit>
+          <span class="badge">web design</span>
+          <span class="badge">ux/ui</span>
+          <span class="badge tag--extra">multi-page</span>
+        </div>
+        <h3 class="project-card__title">Studia 54</h3>
+        <p class="project-card__desc">Корпоративный сайт архитектурного бюро и студии дизайна интерьеров</p>
+        <p class="project-card__link">https://studia-54.com/</p>
+        </div>
+        <div class="project-card__media">
+          <img src="assets/images/proj-studia54.jpg" alt="Превью проекта Studia 54">
+        </div>
+      </a>
+
+      <a href="projects/cabinet.html" class="project-card">
+        <div class="project-card__content">
+<div class="project-card__tags">
+          <span class="badge">web app</span>
+          <span class="badge">ux/ui</span>
+          <span class="badge tag--extra">client portal</span>
+        </div>
+        <h3 class="project-card__title">Личный кабинет клиента</h3>
+        <p class="project-card__desc">Клиентский портал для заказчиков</p>
+        </div>
+        <div class="project-card__media">
+          <img src="assets/images/proj-cabinet.jpg" alt="Превью проекта Личный кабинет клиента">
+        </div>
+      </a>
+
+      <a href="projects/dashboard.html" class="project-card">
+        <div class="project-card__content">
+<div class="project-card__tags">
+          <span class="badge">b2b</span>
+          <span class="badge">dashboard</span>
+        </div>
+        <h3 class="project-card__title">Аналитический дашборд</h3>
+        <p class="project-card__desc">Интерфейс для анализа ключевых метрик компании</p>
+        </div>
+        <div class="project-card__media">
+          <img src="assets/images/proj-dashboard.jpg" alt="Превью проекта Аналитический дашборд">
+        </div>
+      </a>
+
+      <a href="projects/fiftyfourms.html" class="project-card">
+        <div class="project-card__content">
+<div class="project-card__tags" data-mobile-limit>
+          <span class="badge">web design</span>
+          <span class="badge">ux/ui</span>
+          <span class="badge tag--extra">multi-page</span>
+        </div>
+        <h3 class="project-card__title">FiftyFourms</h3>
+        <p class="project-card__desc">E-commerce сайт бренда премиальной мебели</p>
+        <p class="project-card__link">https://fiftyfourms.com/</p>
+        </div>
+        <div class="project-card__media">
+          <img src="assets/images/proj-fiftyfourms.jpg" alt="Превью проекта FiftyFourms">
+        </div>
+      </a>
+
+      <a href="projects/terraria.html" class="project-card">
+        <div class="project-card__content">
+<div class="project-card__tags">
+          <span class="badge">web design</span>
+          <span class="badge">ux/ui</span>
+          <span class="badge tag--extra">concept</span>
+        </div>
+        <h3 class="project-card__title">Terraria</h3>
+        <p class="project-card__desc">Концепт корпоративного сайта студии ландшафтного дизайна</p>
+        </div>
+        <div class="project-card__media">
+          <img src="assets/images/proj-terraria.jpg" alt="Превью проекта Terraria">
+        </div>
+      </a>
+
+      <a href="projects/echo.html" class="project-card">
+        <div class="project-card__content">
+<div class="project-card__tags" data-mobile-limit>
+          <span class="badge">mobile</span>
+          <span class="badge">ux/ui</span>
+          <span class="badge tag--extra">concept</span>
+        </div>
+        <h3 class="project-card__title">Echo</h3>
+        <p class="project-card__desc">Концепт мобильного приложения для подкастов, медитаций и звуковых ритуалов</p>
+        </div>
+        <div class="project-card__media">
+          <img src="assets/images/proj-echo.jpg" alt="Превью проекта Echo">
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section container">
+    <p class="section-label">( Опыт работы )</p>
+
+    <div class="experience-list">
+
+      <article class="experience-item">
+        <h3 class="experience-item__title">Веб / ux ui дизайнер</h3>
+        <div class="experience-item__meta">
+          <span class="experience-item__company">Студия 54</span>
+          <span class="experience-item__dates">июнь 2025 — август 2026</span>
+        </div>
+        <div class="experience-item__body">
+          <p>Работала над редизайном и развитием двух корпоративных сайтов — Studia 54 и FiftyFourms. Проектировала пользовательские интерфейсы: создавала прототипы, разрабатывала UI-дизайн и адаптивные версии страниц. Также участвовала в разработке личного кабинета и мобильных и десктопных дашбордов.</p>
+          <p>Поддерживала и развивала дизайн-систему и UI-kit, анализировала пользовательское поведение с помощью тепловых и карт кликов, формировала гипотезы для улучшения UX. Проводила конкурентный анализ и искала UX/UI-решения, готовила макеты к передаче в разработку и взаимодействовала с командой разработки.</p>
+          <p>Помимо продуктовых задач, создавала баннеры, презентации и другие визуальные материалы для маркетинговых задач.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section container">
+    <p class="section-label">( Навыки )</p>
+
+    <div class="skills-grid">
+      <div class="surface-card">
+        <h3 class="skills-card__title"><span>🖥️</span> Hard skills</h3>
+        <ul class="skills-card__list">
+          <li>Проектирую UX/UI с опорой на пользовательские сценарии и задачи продукта</li>
+          <li>Создаю адаптивные интерфейсы для разных устройств и разрешений</li>
+          <li>Провожу UX-исследования: интервью, CJM и тестирование решений</li>
+          <li>Развиваю библиотеки компонентов, соблюдаю правила дизайн-системы и единый стиль</li>
+          <li>Работаю в Figma: Auto Layout, компоненты, переменные</li>
+          <li>Готовлю макеты с описанием анимаций, адаптивов и состояний; проверяю вёрстку и фиксирую баги</li>
+        </ul>
+      </div>
+
+      <div class="surface-card">
+        <h3 class="skills-card__title"><span>💬</span> Soft skills</h3>
+        <ul class="skills-card__list">
+          <li>Анализирую потребности и поведение пользователей, опираясь на исследования и реальные сценарии</li>
+          <li>Применяю критическое мышление при поиске проблем и решений</li>
+          <li>Презентую и аргументирую дизайн-решения перед командой и заказчиками</li>
+          <li>Быстро адаптируюсь к изменениям и осваиваю новые инструменты</li>
+          <li>Эффективно работаю самостоятельно и в команде</li>
+          <li>Постоянно развиваю навыки и слежу за актуальными UX/UI-подходами</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container">
+    <p class="section-label">( Обо мне )</p>
+
+    <div class="about-grid">
+      <div class="about-grid__text">
+        <div class="surface-card">
+          <h3 class="about-grid__title"><span>📗</span> Вне дизайна</h3>
+          <p class="about-grid__desc">Играю в волейбол, фотографирую на пленку и живу в петербурге</p>
+        </div>
+      </div>
+
+      <div class="media media--sunset">
+        <img src="assets/images/about-sunset.jpg" alt="Закат на берегу озера">
+      </div>
+      <div class="media media--beach media--hidden-mobile">
+        <img src="assets/images/about-beach-group.jpg" alt="Друзья на пляже на закате">
+      </div>
+
+      <div class="media media--camera">
+        <img src="assets/images/about-camera.jpg" alt="Плёночный фотоаппарат и цветок">
+      </div>
+      <div class="media media--volleyball">
+        <img src="assets/images/about-volleyball.jpg" alt="Волейбольная команда">
+      </div>
+      <div class="media media--cat media--hidden-mobile">
+        <img src="assets/images/about-cat.jpg" alt="Белый кот">
+      </div>
+      <div class="media media--forest">
+        <img src="assets/images/about-forest.jpg" alt="Прогулка у лесной реки">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer container">
+  <div class="footer-card">
+    <h2 class="footer-card__title">📩 Контакты</h2>
+    <p class="footer-card__row">Телеграм: @annnechh</p>
+    <p class="footer-card__row">Почта: a.sapugoltseva@yandex.ru</p>
+  </div>
+  <p class="site-footer__copy">© 2026</p>
+</footer>
+
+<button class="scroll-top" data-scroll-top aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Echo — Анна Сапугольцева</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="../index.html" class="header__brand">
+      <img class="header__avatar" src="../assets/images/portrait.jpg" alt="Анна Сапугольцева">
+      <span class="header__name">Анна Сапугольцева</span>
+    </a>
+
+    <nav class="header__nav">
+      <a href="../index.html#portfolio" class="nav-link">Портфолио</a>
+      <a href="../index.html#experience" class="nav-link">Резюме</a>
+      <a href="../index.html#skills" class="nav-link">Навыки</a>
+      <a href="../index.html#about" class="nav-link">Обо мне</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="../assets/files/Sapugoltseva-CV.pdf" target="_blank" rel="noopener" class="btn btn--outline">CV</a>
+      <a href="https://t.me/annnechh" class="btn btn--primary">Написать в tg</a>
+    </div>
+
+    <button class="header__burger" data-burger-open aria-label="Открыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu__top">
+    <button class="mobile-menu__close" data-burger-close aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav">
+    <a href="../index.html#portfolio" class="nav-link">Портфолио</a>
+    <a href="../index.html#experience" class="nav-link">Резюме</a>
+    <a href="../index.html#skills" class="nav-link">Навыки</a>
+    <a href="../index.html#about" class="nav-link">Обо мне</a>
+  </nav>
+  <div class="mobile-menu__actions">
+    <a href="https://t.me/annnechh" class="btn btn--primary">Написать в tg</a>
+    <a href="../assets/files/Sapugoltseva-CV.pdf" target="_blank" rel="noopener" class="btn btn--outline">CV</a>
+  </div>
+</div>
+
+<main>
+  <section class="section project-hero container">
+    <div class="content-narrow">
+      <a href="../index.html#portfolio" class="btn btn--back"><span class="btn__icon">&lsaquo;</span> К портфолио</a>
+
+      <h1 class="project-hero__title">Echo</h1>
+      <p class="project-hero__desc">Концепт мобильного приложения для подкастов, медитаций и звуковых ритуалов</p>
+      <div class="project-hero__cta">
+        <a href="https://www.behance.net/gallery/232595845/ECHO-A-Podcast-Mobile-App" class="btn btn--primary" target="_blank" rel="noopener">Смотреть кейс</a>
+      </div>
+    </div>
+
+    <div class="project-hero__media">
+      <img src="../assets/images/proj-echo-hero.jpg" alt="Превью проекта Echo">
+    </div>
+  </section>
+
+  <section class="project-content container">
+    <div class="project-body content-narrow">
+      <div class="project-block">
+        <h2 class="project-block__title">Вводные</h2>
+        <div class="project-block__text">
+          <p>Echo — концепт мобильного приложения, объединяющего подкасты, медитации, звуковые ритуалы и личный дневник в одном пространстве. Приложение помогает выбирать контент в зависимости от настроения и времени суток, создавать персональные ритуалы прослушивания и сохранять свои мысли после прослушивания.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Проблема</h2>
+        <div class="project-block__text">
+          <p>Аудиоконтент может быть способом расслабиться, получить новые знания или переключиться после насыщенного дня, но пользователь часто самостоятельно ищет подходящий контент и использует разные сервисы для разных задач. При этом выбор подкаста не учитывает текущее состояние человека, а впечатления и мысли после прослушивания остаются за пределами приложения.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Цель</h2>
+        <div class="project-block__text">
+          <p>Создать единое пространство для осознанного потребления аудиоконтента, которое учитывает состояние, контекст и потребности пользователя, помогая не только найти подходящий контент, но и сформировать вокруг него персональный ритуал.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Исследование</h2>
+        <div class="project-block__text">
+          <p>Для определения ключевых сценариев я провела функциональный и сводный анализ, составила CJM и сформировала персону пользователя.</p>
+          <p>В качестве основной персоны выступила Алина, 28 лет — менеджер проектов с высокой информационной нагрузкой. Она ищет способы расслабиться, упорядочить мысли и находить время для себя в течение дня. Для неё важны удобство, персонализация и минимальное количество лишних действий.</p>
+          <p>Анализ показал, что пользовательский опыт не заканчивается на выборе и прослушивании контента. Важными становятся контекст прослушивания, эмоциональное состояние, атмосфера и возможность зафиксировать личные впечатления.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Решение</h2>
+        <div class="project-block__text">
+          <p>В основе концепции — идея персонального ритуала прослушивания, который адаптируется под состояние пользователя и его контекст.</p>
+          <p>В Echo реализованы:</p>
+          <ul class="project-block__list">
+            <li><strong>Эмоциональный подбор</strong> — рекомендации подкастов в зависимости от текущего настроения.</li>
+            <li><strong>Атмосфера прослушивания</strong> — фоновые сцены и звуки, которые поддерживают тему и настроение контента.</li>
+            <li><strong>Виртуальные комнаты</strong> — пространство для обсуждения подкаста во время или после прослушивания.</li>
+            <li><strong>Личный дневник</strong> — возможность сохранять заметки и личные впечатления после прослушивания.</li>
+            <li><strong>Ритуалы</strong> — персональные сценарии прослушивания, привязанные ко времени суток и настроению.</li>
+            <li><strong>AI-ассистент</strong> — поиск нужной информации внутри подкаста по смысловому запросу пользователя, а не только по точному совпадению текста.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Результат</h2>
+        <div class="project-block__text">
+          <p>Подкасты, медитации, фоновые звуки и рефлексия объединены в одном пользовательском сценарии.</p>
+          <p>Контент подбирается не только по интересам, но и с учётом состояния и контекста пользователя.</p>
+          <p>Прослушивание превращается из отдельного действия в последовательный сценарий:</p>
+          <p>выбрать состояние → подобрать контент → погрузиться → обсудить или осмыслить → сохранить впечатления.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Ссылки</h2>
+        <div class="project-links">
+          <a href="https://www.behance.net/gallery/232595845/ECHO-A-Podcast-Mobile-App" target="_blank" rel="noopener">Кейс на Беханс</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer container">
+  <div class="footer-card">
+    <h2 class="footer-card__title">📩 Контакты</h2>
+    <p class="footer-card__row">Телеграм: @annnechh</p>
+    <p class="footer-card__row">Почта: a.sapugoltseva@yandex.ru</p>
+  </div>
+  <p class="site-footer__copy">© 2026</p>
+</footer>
+
+<button class="scroll-top" data-scroll-top aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+</button>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

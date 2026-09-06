@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FiftyFourms — Анна Сапугольцева</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="../index.html" class="header__brand">
+      <img class="header__avatar" src="../assets/images/portrait.jpg" alt="Анна Сапугольцева">
+      <span class="header__name">Анна Сапугольцева</span>
+    </a>
+
+    <nav class="header__nav">
+      <a href="../index.html#portfolio" class="nav-link">Портфолио</a>
+      <a href="../index.html#experience" class="nav-link">Резюме</a>
+      <a href="../index.html#skills" class="nav-link">Навыки</a>
+      <a href="../index.html#about" class="nav-link">Обо мне</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="../assets/files/Sapugoltseva-CV.pdf" target="_blank" rel="noopener" class="btn btn--outline">CV</a>
+      <a href="https://t.me/annnechh" class="btn btn--primary">Написать в tg</a>
+    </div>
+
+    <button class="header__burger" data-burger-open aria-label="Открыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu__top">
+    <button class="mobile-menu__close" data-burger-close aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav">
+    <a href="../index.html#portfolio" class="nav-link">Портфолио</a>
+    <a href="../index.html#experience" class="nav-link">Резюме</a>
+    <a href="../index.html#skills" class="nav-link">Навыки</a>
+    <a href="../index.html#about" class="nav-link">Обо мне</a>
+  </nav>
+  <div class="mobile-menu__actions">
+    <a href="https://t.me/annnechh" class="btn btn--primary">Написать в tg</a>
+    <a href="../assets/files/Sapugoltseva-CV.pdf" target="_blank" rel="noopener" class="btn btn--outline">CV</a>
+  </div>
+</div>
+
+<main>
+  <section class="section project-hero container">
+    <div class="content-narrow">
+      <a href="../index.html#portfolio" class="btn btn--back"><span class="btn__icon">&lsaquo;</span> К портфолио</a>
+
+      <h1 class="project-hero__title">FiftyFourms</h1>
+      <p class="project-hero__desc">E-commerce сайт бренда премиальной мебели</p>
+      <div class="project-hero__cta">
+        <a href="https://fiftyfourms.com/" class="btn btn--primary" target="_blank" rel="noopener">Перейти на сайт</a>
+      </div>
+    </div>
+
+    <div class="project-hero__media">
+      <img src="../assets/images/proj-fiftyfourms-hero.jpg" alt="Превью проекта FiftyFourms">
+    </div>
+  </section>
+
+  <section class="project-content container">
+    <div class="project-body content-narrow">
+      <div class="project-block">
+        <h2 class="project-block__title">Вводные</h2>
+        <div class="project-block__text">
+          <p>Редизайн сайта мебельного производства с обновлением существующих страниц и визуальной системы продукта.</p>
+          <p>Отвечала за переработку структуры и визуальной подачи страниц, улучшение пользовательского сценария и развитие единого стиля сайта.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Проблема</h2>
+        <div class="project-block__text">
+          <p>Существующие страницы требовали визуального и UX-обновления: необходимо было сделать подачу продукции более современной, структурированной и удобной для изучения.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Цель</h2>
+        <div class="project-block__text">
+          <p>Обновить ключевые страницы сайта, улучшить восприятие ассортимента и сделать взаимодействие с контентом более последовательным.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Решение</h2>
+        <div class="project-block__text">
+          <p>В рамках редизайна переработала основные страницы сайта, обновила композицию и иерархию контента, усилила визуальную подачу продукции и привела страницы к единой системе компонентов и стилевых решений.</p>
+          <p>Особое внимание уделялось тому, чтобы пользователь мог быстро понять характеристики продукта, изучить визуальные материалы и перейти к связанному контенту без лишних действий.</p>
+        </div>
+      </div>
+      <div class="project-block">
+        <h2 class="project-block__title">Результат</h2>
+        <div class="project-block__text">
+          <p>Сайт получил более современную и цельную визуальную систему, а страницы продукции стали последовательнее с точки зрения структуры, подачи информации и пользовательского сценария.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer container">
+  <div class="footer-card">
+    <h2 class="footer-card__title">📩 Контакты</h2>
+    <p class="footer-card__row">Телеграм: @annnechh</p>
+    <p class="footer-card__row">Почта: a.sapugoltseva@yandex.ru</p>
+  </div>
+  <p class="site-footer__copy">© 2026</p>
+</footer>
+
+<button class="scroll-top" data-scroll-top aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+</button>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

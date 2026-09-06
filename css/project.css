@@ -1,0 +1,121 @@
+/* ==========================================================================
+   PROJECT DETAIL PAGE
+   ========================================================================== */
+
+.project-hero {
+  margin-top: 0;
+  padding-top: var(--space-32);
+  padding-bottom: 0;
+}
+
+.project-hero__title {
+  margin-top: var(--space-32);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: 700;
+  color: var(--gray-16);
+}
+
+.project-hero__desc {
+  margin-top: var(--space-16);
+  font-size: var(--fs-body-l);
+  line-height: var(--lh-body-l);
+  color: var(--gray-10);
+}
+
+.project-hero__cta {
+  margin-top: var(--space-32);
+}
+
+.project-hero__media {
+  margin-top: var(--space-48);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  aspect-ratio: 1548 / 975;
+}
+.project-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Второй блок страницы (текстовые секции) — раньше использовал общий
+   .section с крупным section-gap; теперь отступ от блока с картинкой
+   до текстовых блоков равен тому же расстоянию, что и между
+   текстовыми блоками между собой (space-64). */
+.project-content {
+  margin-top: var(--space-64);
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-64);
+}
+
+.project-block__title {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  font-weight: 700;
+  color: var(--gray-16);
+}
+
+.project-block__text {
+  margin-top: var(--space-16);
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+  color: var(--gray-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.project-block__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.project-block__list li {
+  position: relative;
+  padding-left: var(--space-16);
+}
+.project-block__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gray-9);
+}
+
+.project-links {
+  margin-top: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+.project-links a {
+  font-size: var(--fs-body-m);
+  color: var(--gray-11);
+  text-decoration: underline;
+  text-decoration-color: var(--gray-5);
+  text-underline-offset: 3px;
+  width: fit-content;
+}
+@media (hover: hover) and (pointer: fine) {
+  .project-links a:hover {
+    color: var(--gray-16);
+  }
+}
+
+@media (max-width: 767px) {
+  .project-hero__title,
+  .project-hero__desc {
+    max-width: none;
+  }
+}
